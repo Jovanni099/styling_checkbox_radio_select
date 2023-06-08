@@ -47,3 +47,4 @@
 .checkbox .checkbox__input:checked + .checkbox_label::after {
   opacity: 1;
 }
+/* Radio */

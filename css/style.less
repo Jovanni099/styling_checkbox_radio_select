@@ -91,6 +91,33 @@
             // left: 0;
             // z-index: 1;
             transition: background 300ms ease-out, border 300ms ease-out;
+            background: #24b31d;
         }
+
+        &::after {
+            content: '';
+            width: 16px;
+            height: 16px;
+            background: url('../assets/img/check.png') no-repeat;
+            background-size: 12px 12px;
+            display: block;
+            // background: #24b31d;
+            // border-radius: 50%;
+            position: absolute;
+            top: 2px;
+            left: 3px;
+            // z-index: 2;
+            opacity: 0;
+            transition: opacity 700ms ease-out;
+        }
+    }
+
+    .radio__input:checked+.radio__label::before {
+        filter: drop-shadow(1px 1px 7px rgb(8, 225, 26));
+        border-color: #0a7b04;
+    }
+
+    .radio__input:checked+.radio__label::after {
+        opacity: 1;
     }
 }

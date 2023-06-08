@@ -10,6 +10,7 @@
   font-size: 16px;
   color: #444;
   padding-left: 25px;
+  cursor: pointer;
 }
 .checkbox .checkbox_label::before {
   content: "";
@@ -17,11 +18,13 @@
   width: 16px;
   height: 16px;
   border: 1px solid #ccc;
+  border-radius: 3px;
   background: white;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
+  transition: background 300ms ease-out, border 300ms ease-out;
 }
 .checkbox .checkbox_label::after {
   content: "";
@@ -33,10 +36,14 @@
   opacity: 0;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 1px;
   z-index: 2;
+  transition: opacity 300ms ease-out;
 }
-.checkbox .checkbox__input:checked + .checkbox_label {
+.checkbox .checkbox__input:checked + .checkbox_label::before {
+  background-color: #24b31d;
+  border-color: #e6f602;
+}
+.checkbox .checkbox__input:checked + .checkbox_label::after {
   opacity: 1;
-  background: green;
 }

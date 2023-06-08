@@ -2,6 +2,7 @@
 
 .checkbox {
     position: relative;
+    margin-bottom: 20px;
 
     .checkbox__input {
         appearance: none;
@@ -61,3 +62,35 @@
 }
 
 /* Radio */
+.radio {
+    position: relative;
+    margin-bottom: 20px;
+
+    .radio__input {
+        appearance: none;
+        // -webkit-appearance: none;
+        position: absolute;
+    }
+
+    .radio__label {
+        font-size: 16px;
+        color: rgb(49, 24, 24);
+        padding-left: 25px;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background: white;
+            position: absolute;
+            // top: 0;
+            // left: 0;
+            // z-index: 1;
+            transition: background 300ms ease-out, border 300ms ease-out;
+        }
+    }
+}

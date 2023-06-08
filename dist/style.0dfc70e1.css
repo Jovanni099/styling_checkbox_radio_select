@@ -1,6 +1,7 @@
 /* Checkbox */
 .checkbox {
   position: relative;
+  margin-bottom: 20px;
 }
 .checkbox .checkbox__input {
   appearance: none;
@@ -48,6 +49,31 @@
   opacity: 1;
 }
 /* Radio */
+.radio {
+  position: relative;
+  margin-bottom: 20px;
+}
+.radio .radio__input {
+  appearance: none;
+  position: absolute;
+}
+.radio .radio__label {
+  font-size: 16px;
+  color: #311818;
+  padding-left: 25px;
+  cursor: pointer;
+}
+.radio .radio__label::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: white;
+  position: absolute;
+  transition: background 300ms ease-out, border 300ms ease-out;
+}
 
 
 /*# sourceMappingURL=/style.0dfc70e1.css.map */
